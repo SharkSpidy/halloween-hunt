@@ -7,16 +7,22 @@ export interface StageConfig {
 }
 
 /**
- * Drop your Libresprite exports here:
- *   public/glyphs/stage1/glyph1.png, glyph2.png, glyph3.png
- *   public/glyphs/stage2/...  (same names)
- * Rename in this file if you prefer other file names.
+ * Glyph files per stage, relative to public/glyphs/stageX/.
+ * Every file listed here MUST exist, otherwise detection fails for that stage.
+ * Add the missing files for stages 2–4 (3 each) and list them here.
  */
+const GLYPH_FILES: Record<number, string[]> = {
+  1: ['bat.svg', 'jackolantern.svg', 'lantern.svg'],
+  2: ['jack_o_lantern_32x32.svg'], // TODO: add 2 more sprites
+  3: [], // TODO
+  4: [], // TODO
+};
+
 export const STAGES: StageConfig[] = [1, 2, 3, 4].map((n) => ({
   stage: n,
-  glyphs: [1, 2, 3].map((g) => ({
-    id: `s${n}g${g}`,
-    src: `/glyphs/stage${n}/glyph${g}.png`,
+  glyphs: GLYPH_FILES[n].map((file) => ({
+    id: `s${n}-${file}`,
+    src: `/glyphs/stage${n}/${file}`,
   })),
   clue: `/clues/stage${n}.png`,
 }));
