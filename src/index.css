@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-haunt-void font-sans text-haunt-bone antialiased;
+  }
+  ::selection {
+    @apply bg-neon/60 text-white;
+  }
+}
