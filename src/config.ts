@@ -9,11 +9,11 @@ export interface StageConfig {
 /**
  * Glyph files per stage, relative to public/glyphs/stageX/.
  * Every file listed here MUST exist, otherwise detection fails for that stage.
- * Add the missing files for stages 2–4 (3 each) and list them here.
+ * Add the missing files for stages 3–4 (3 each) and list them here.
  */
 const GLYPH_FILES: Record<number, string[]> = {
-  1: ['bat.svg', 'jackolantern.svg', 'lantern.svg'],
-  2: ['jack_o_lantern_32x32.svg'], // TODO: add 2 more sprites
+  1: ['vampire.png', 'jackolantern.svg', 'ghost-32.png'],
+  2: ['bat.svg', 'jackolantern.svg', 'lantern.svg'],
   3: [], // TODO
   4: [], // TODO
 };
