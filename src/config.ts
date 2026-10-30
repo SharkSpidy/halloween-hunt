@@ -32,10 +32,6 @@ export const TOTAL_STAGES = STAGES.length;
 /** Cosine-similarity threshold (0–1) for accepting a glyph match. */
 export const MATCH_THRESHOLD = 0.72;
 
-/** Where OpenCV.js is loaded from. Override with VITE_OPENCV_URL to self-host. */
-export const OPENCV_URL: string =
-  import.meta.env.VITE_OPENCV_URL ?? 'https://docs.opencv.org/4.10.0/opencv.js';
-
 /** Used if the assembled QR can't be decoded in the browser. */
 export const FALLBACK_REWARD_URL: string | undefined = import.meta.env.VITE_REWARD_URL;
 

@@ -10,11 +10,10 @@ halloween-hunt/
 │  ├─ glyphs/stage1..stage4/     ← 3 Libresprite PNGs each: glyph1.png, glyph2.png, glyph3.png
 │  ├─ clues/                     ← stage1.png … stage4.png (the four quarters of the master QR)
 │  ├─ design-assets/             ← YOUR custom UI graphics (served as /design-assets/…)
-│  └─ vendor/opencv.js           ← optional self-hosted OpenCV (set VITE_OPENCV_URL=/vendor/opencv.js)
 ├─ src/
 │  ├─ assets/design/             ← YOUR custom graphics to import from code
 │  ├─ components/ (AuthPanel, StageView, RevealPipeline, StageProgress, QrAssembler, Leaderboard)
-│  ├─ lib/ (glyphDetector, opencv, particleMorph, supabase, auth)
+│  ├─ lib/ (glyphDetector, ncc, particleMorph, supabase, auth)
 │  ├─ config.ts                  ← stages, file names, match threshold
 │  ├─ App.tsx, main.tsx, index.css
 ├─ supabase/schema.sql           ← tables, RLS, complete_stage() RPC, leaderboard
